@@ -2,7 +2,6 @@ package com.tw.ddd.domain;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 import java.util.UUID;
 
 public class Cart {
@@ -27,10 +26,6 @@ public class Cart {
 
     public List<Item> getDeletedItems() {
         return deletedItems;
-    }
-
-    public String getUuid() {
-        return uuid;
     }
 
     @Override
