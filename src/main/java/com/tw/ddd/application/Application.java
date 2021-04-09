@@ -22,5 +22,17 @@ public class Application {
         cart.remove(itemIpad);
         List<Item> deletedItems = cart.getDeletedItems();
         deletedItems.forEach(item -> System.out.println(item.getProduct().getName()));
+
+        checkEquality();
+    }
+
+    private static void checkEquality() {
+        Cart cart1 = new Cart();
+        Cart cart2 = new Cart();
+        Product productIpad = new Product("Ipad pro");
+        Item itemIpad = new Item(productIpad, 1);
+        cart1.add(itemIpad);
+        cart2.add(itemIpad);
+        System.out.println(cart1.equals(cart2));
     }
 }
