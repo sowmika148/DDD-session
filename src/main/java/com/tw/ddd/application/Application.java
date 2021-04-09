@@ -4,7 +4,9 @@ import com.tw.ddd.domain.Cart;
 import com.tw.ddd.domain.Item;
 import com.tw.ddd.domain.Product;
 
-public class CartSession {
+import java.util.List;
+
+public class Application {
     public static void main(String[] args) {
         Cart cart = new Cart();
         Product productIpad = new Product("Ipad pro");
@@ -18,5 +20,7 @@ public class CartSession {
         cart.add(itemBat);
 
         cart.remove(itemIpad);
+        List<Item> deletedItems = cart.getDeletedItems();
+        deletedItems.forEach(item -> System.out.println(item.getProduct().getName()));
     }
 }
